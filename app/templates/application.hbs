@@ -1,20 +1,32 @@
 <header class="navbar navbar-default navbar-static-top" role="navigation">
   <div class="container-fluid">
-    <nav class="collapse navbar-collapse">
+    <nav>
+      <div class="navbar-header">
+        <a class="navbar-brand">ETLive</a>
+      </div>
       <ul class="nav navbar-nav">
-        <li><a>ETLive</a></li>
-        {{#link-to 'application' tagName='li'}}<a href="#">Home</a>{{/link-to}}
+        {{#link-to 'dashboard' tagName='li'}}<a href="#">Home</a>{{/link-to}}
         {{#link-to '' tagName='li'}}<a href="#">Servers</a>{{/link-to}}
         {{#link-to '' tagName='li'}}<a href="#">Friends</a>{{/link-to}}
         {{#link-to '' tagName='li'}}<a href="#">Settings</a>{{/link-to}}
       </ul>
+      <ul class="nav navbar-nav navbar-right">
+        {{#link-to '' tagName='li'}}<a href="#">Admin</a>{{/link-to}}
+        {{#link-to '' tagName='li'}}<a href="#">Logout</a>{{/link-to}}
+      </ul>
     </nav>
   </div>
 </header>
-<div class="container content">
-  <p>Content</p>
+<div class="content">
   {{outlet}}
 </div>
-<footer>
-  <p> some footer</p>
+<footer class="navbar navbar-fixed-bottom">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-left">&copy; No one at all. Go to town.</p>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="http://www.splashdamage.com/">Splashdamage</a></li>
+      <li><a href="http://ycn-hosting.com/">YCN-Hosting</a></li>
+      <li><a href="http://www.etlegacy.com/">ET:Legacy</a></li>
+    </ul>
+  </div>
 </footer>
