@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'etl',
+    podModulePrefix: 'etl/pods',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
