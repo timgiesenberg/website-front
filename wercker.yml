@@ -4,6 +4,8 @@ build:
     - npm-install
     - hgen/bower-install@0.5.7
     - npm-test
+deploy:
+  steps:
     - script:
         name: deploy to divshot.io
         code: |
