@@ -1,10 +1,9 @@
 box: wercker/nodejs
-# Build definition
 build:
-  # The steps that will be executed on build
   steps:
-    # A custom script step, name value is used in the UI
-    # and the code value contains the command that get executed
+    - npm-install
+    - plasticine/bower-install@0.0.4
+    - npm-test
     - script:
         name: deploy to divshot.io
         code: |
