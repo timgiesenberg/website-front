@@ -9,6 +9,9 @@ deploy:
     - script:
         name: deploy to divshot.io
         code: |
-          npm install -g divshot-cli
-          divshot push $WERCKER_DEPLOYTARGET_NAME --token $DIVSHOT_TOKEN
-
+          alias divshot=./node_modules/.bin/divshot
+          divshot --version
+          divshot config
+          divshot config:remove root
+          divshot config:add root $WERCKER_OUTPUT_DIR
+          ./node_modules/.bin/divshot push $WERCKER_DEPLOYTARGET_NAME --token $DIVSHOT_TOKEN
