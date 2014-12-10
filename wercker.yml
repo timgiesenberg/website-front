@@ -21,6 +21,7 @@ deploy:
         - script:
             name: Deploy to Divshot
             code: |
+                npm install bower
                 alias divshot=./node_modules/.bin/divshot
                 divshot --version
                 divshot config
