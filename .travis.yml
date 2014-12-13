@@ -19,5 +19,5 @@ deploy:
     staging: staging
     production: production
   skip_cleanup: true
-  api_key:
+  api_key: 
     secure: oEQH6HGv3OdwIrARln+O+yT0jf2pkQuaonkXvDB86b68bLlDFV0bpiE1V3jwQFdkOOZhHTCq67/6dnm4MJsLYsapZleOc6sKj2bIy43cExf6tr50Jgjdf4k+6odNBsEy685rUtbpameRvTbzNU7eQQq1dqLztQ7Z2ZP3WgaV4J8=
