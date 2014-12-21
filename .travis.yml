@@ -12,10 +12,13 @@ install:
 - bower install
 script:
 - npm test
+before_deploy:
+- ember build
 deploy:
   provider: divshot
   api_key:
     secure: FDtvlA7OugLCdKiGjAR04Z2UAObv5k1/OcftoEYoqFrrRg//TfOxR9qF1jQjZb1VXxyhoEJkUY2/EsQ76rnhWlPm8EwBmBm2qz5lftczN33rX/5B9ZMIRr5G9C3CBQjBwz02vHslQhwQkP81VQ7BcIWMxQIYY86i8r8WRmhi5mM=
+  skip_cleanup: true
   environment: development
   on:
     repo: etlive/website-front
