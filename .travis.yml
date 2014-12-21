@@ -14,10 +14,8 @@ script:
 - npm test
 deploy:
   provider: divshot
-  environment:
-    master: development
-    staging: staging
-    production: production
-  skip_cleanup: true
-  api_key: 
-    secure: oEQH6HGv3OdwIrARln+O+yT0jf2pkQuaonkXvDB86b68bLlDFV0bpiE1V3jwQFdkOOZhHTCq67/6dnm4MJsLYsapZleOc6sKj2bIy43cExf6tr50Jgjdf4k+6odNBsEy685rUtbpameRvTbzNU7eQQq1dqLztQ7Z2ZP3WgaV4J8=
+  api_key:
+    secure: FDtvlA7OugLCdKiGjAR04Z2UAObv5k1/OcftoEYoqFrrRg//TfOxR9qF1jQjZb1VXxyhoEJkUY2/EsQ76rnhWlPm8EwBmBm2qz5lftczN33rX/5B9ZMIRr5G9C3CBQjBwz02vHslQhwQkP81VQ7BcIWMxQIYY86i8r8WRmhi5mM=
+  environment: development
+  on:
+    repo: etlive/website-front
